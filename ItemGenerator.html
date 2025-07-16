@@ -1,0 +1,64 @@
+<head>
+<title>Item Generator</title>
+</head>
+
+<script src = "Main.js"></script>
+<script src = "Item.js"></script>
+
+<body>
+<table>
+<tr>
+    <td><input type="checkbox" id="weapons" name="weapons" onchange="update()" checked /><label for="weapons">Weapons</label></td>
+    <td><input type="checkbox" id="helmets" name="helmets" onchange="update()" checked /><label for="helmets">Helmets</label></td>
+    <td><input type="checkbox" id="gloves" name="gloves" onchange="update()" checked /><label for="gloves">Gloves</label></td>
+</tr><tr>
+    <td><input type="checkbox" id="armors" name="armors" onchange="update()" checked /><label for="armors">Armors</label></td>
+    <td><input type="checkbox" id="pants" name="pants" onchange="update()" checked /><label for="pants">Pants</label></td>
+    <td><input type="checkbox" id="boots" name="boots" onchange="update()" checked /><label for="boots">Boots</label></td>
+</tr></table>
+<table>
+	<tr><td>Items To Make: <input type="txt" value="10" size="3" id="ItemCount" onkeyup="update()"/></td></tr>
+	<tr><td>Player Level: <input type="txt" value="5" size="3" id="Level" onkeyup="updateLevel()"/></td></tr>
+	<tr><td><input type="checkbox" id="max" name="max" onchange="update()" /><label for="max">Maximise Level</label></td></tr>
+</table>
+<details>
+<summary> Advanced Options </summary>
+<table>
+	<tr><td>Max Spell Level: <input type="txt" value="" size="3" id="MaxSpell" onkeyup="update()"/></td>
+		<td><button type="button" onclick="remove('MaxSpell')">Remove</button></td></tr>
+	<tr><td>Max Weapon Level: <input type="txt" value="" size="3" id="MaxWeapon" onkeyup="update()"/></td>
+		<td><button type="button" onclick="remove('MaxWeapon')">Remove</button></td></tr>
+	<tr><td>Max Skill Bonus: <input type="txt" value="" size="3" id="MaxSkill" onkeyup="update()"/></td>
+		<td><button type="button" onclick="remove('MaxSkill')">Remove</button></td></tr>
+	<tr><td>Max Stat Bonus: <input type="txt" value="" size="3" id="MaxStat" onkeyup="update()"/></td>
+		<td><button type="button" onclick="remove('MaxStat')">Remove</button></td></tr>
+</table>
+</details>
+<br>Gold values are for Persuasion checks on haggling<br><br>
+
+<style>
+.info {
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding-left: 5px;
+		padding-right: 20px;
+	}
+}
+</style>
+
+<table class="info">
+<tr>
+	<td>Name</div></td>
+	<td>DC5</div></td>
+	<td>DC10</div></td>
+	<td>DC15</div></td>
+	<td>DC20</div></td>
+</tr><tr>
+	<td><div id="col0"></div></td>
+	<td><div id="col1"></div></td>
+	<td><div id="col2"></div></td>
+	<td><div id="col3"></div></td>
+	<td><div id="col4"></div></td>
+</tr></table>
+</body>
