@@ -1,1 +1,1 @@
-https://github.com/sloverlord/ItemGen
+https://sloverlord.github.io/ItemGen/
